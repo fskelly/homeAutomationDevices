@@ -41,7 +41,7 @@ I have a simple query that publishes data to a MQTT Topic and then captured by N
 
 ### Lounge  
 
-> #### [Lounge Light](tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
+> #### [Lounge Light](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
 
 This lightbulb is based on [Tasmota](https://tasmota.github.io/docs/). Used by my [Home Automation System](https://www.home-assistant.io/) and [Node-Red](https://nodered.org/) for some great automations.  
 The file can be found [here](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)  
