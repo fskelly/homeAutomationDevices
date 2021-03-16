@@ -26,7 +26,7 @@ Incredibly expandable and flexible. For more information checkout [Tasmota](http
 
 > #### Octopi
 
-I have a simple query that publishes data to a MQTT Topic and then captured by Node-Red and sent into Home-Assistant. My file to publish RPI Temperature to MQTT can be found [here](python\temp1-hassos-mqtt.py). You would need to modify the required settings in the file, for example,  
+I have a simple query that publishes data to a MQTT Topic and then captured by Node-Red and sent into Home-Assistant. My file to publish RPI Temperature to MQTT can be found [here](/python/temp1-hassos-mqtt.py). You would need to modify the required settings in the file, for example,  
 
 1. MQTT Server
 2. MQTT Username
@@ -44,7 +44,7 @@ I have a simple query that publishes data to a MQTT Topic and then captured by N
 > #### [Lounge Light](tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
 
 This lightbulb is based on [Tasmota](https://tasmota.github.io/docs/). Used by my [Home Automation System](https://www.home-assistant.io/) and [Node-Red](https://nodered.org/) for some great automations.  
-The file can be found [here](tasmota\lounge\Config_loungergbw_5090_9.1.0.dmp)  
+The file can be found [here](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)  
 
 ### Garage
 
