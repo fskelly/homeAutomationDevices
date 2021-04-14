@@ -24,7 +24,7 @@ Incredibly expandable and flexible. For more information checkout [Tasmota](http
 
 ### Study
 
-> #### Octopi
+#### Octopi
 
 I have a simple query that publishes data to a MQTT Topic and then captured by Node-Red and sent into Home-Assistant. My file to publish RPI Temperature to MQTT can be found [here](/python/temp1-hassos-mqtt.py). You would need to modify the required settings in the file, for example,  
 
@@ -33,22 +33,26 @@ I have a simple query that publishes data to a MQTT Topic and then captured by N
 3. MQTT Password
 4. MQTT Topic
 
-> #### Study Sensor
+#### Study Sensor
 
-> #### Server Cabinet Fan
+#### [Server Cabinet Fan](/esphome/study/sonoff-powr2-server-cabinet.yaml)  
+
+> This is a SonOff POW R2 based upon [ESPHome](esphome.io). Used by my [Home Automation System](https://www.home-assistant.io/) and [Node-Red](https://nodered.org/) for some great automations. I have a sensor in my server cabinet and it gathers temperature data, when the temperature goes over a set point, Node-Red will then turn on the server fan and then turn the fan back off after set conditions are met.
 
 ### Kitchen  
 
+#### [Washing Machine SonOff POW](/esphome/kitchen/sonoff-powr2-washing-machine.yaml)  
+
+This is a SonOff POW R2 based upon [ESPHome](esphome.io). Used by my [Home Automation System](https://www.home-assistant.io/) and [Node-Red](https://nodered.org/) for some great automations. Specifically for Power Monitoring and then using Alexa to tell us that the washing is complete. This is quite useful as we seem to have a tendency to forget. Have you ever smelled wahing that was left in a washing machine too long? :rage:
+
 ### Lounge  
 
-> #### [Lounge Light](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
+#### [Lounge Light](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
 
 This lightbulb is based on [Tasmota](https://tasmota.github.io/docs/). Used by my [Home Automation System](https://www.home-assistant.io/) and [Node-Red](https://nodered.org/) for some great automations.  
 The file can be found [here](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)  
 
 ### Garage
-
-#### Washing Machine SonOff POW
 
 ## Off the Shelf Devices
 
