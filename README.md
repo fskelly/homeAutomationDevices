@@ -2,22 +2,27 @@
 
 ## Overview  
 
-> This is a collection of [ESPHome](https://ESPHome.io) configuration files, [Tasmota](https://tasmota.github.io/docs/) dmp files and code for my various ESP8266 devices that integrate with [Home Assistant](https://www.home-assistant.io/). I am using includes and packages pretty extensively in order to prevent duplication and allow for easy changing of common settings.
-> </br>
-> **What is ESPHome?**  
+## Diagram
+
+![HAConnectivity](pictures\HACOnnectivity.drawio.svg)
+
+**Why this repo?**  
+This is a collection of [ESPHome](https://ESPHome.io) configuration files, [Tasmota](https://tasmota.github.io/docs/) dmp files and code for my various ESP8266 devices that integrate with [Home Assistant](https://www.home-assistant.io/). I am using includes and packages pretty extensively in order to prevent duplication and allow for easy changing of common settings.
+
+**What is ESPHome?**  
 > ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems. For more information checkout [ESPHome.io](https://ESPHome.io).
-> </br>
-> **What is Tasmota?**  
+
+**What is Tasmota?**  
 > Total local control with quick setup and updates.
 Control using MQTT, Web UI, HTTP or serial.
 Automate using timers, rules or scripts.
 Integration with home automation solutions.
 Incredibly expandable and flexible. For more information checkout [Tasmota](https://tasmota.github.io/docs/).
-> </br>
-> **What is Shelly?**  
+
+**What is Shelly?**  
 > Shelly is a collection of IoT devices that are built for home automation. For more information checkout [Shelly Cloud](https://shelly.cloud/).
-> </br>
-> **What is Home Assistant**
+
+**What is Home Assistant?**
 > Home Assistant is open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.  For more information check out [Home-Assistant.io](https://www.home-assistant.io/).
 
 ## Custom Devices
@@ -26,16 +31,16 @@ Incredibly expandable and flexible. For more information checkout [Tasmota](http
 
 > #### Octopi
 
-I have a simple query that publishes data to a MQTT Topic and then captured by Node-Red and sent into Home-Assistant. My file to publish RPI Temperature to MQTT can be found [here](/python/temp1-hassos-mqtt.py). You would need to modify the required settings in the file, for example,  
+I have a simple query that publishes data to a MQTT Topic and then captured by Node-Red and sent into Home-Assistant. My file to publish RPI Temperature to MQTT can be found [here](/python/rpi/temp1-hassos-mqtt.py). You would need to modify the required settings in the file, for example,  
 
 1. MQTT Server
-2. MQTT Username
-3. MQTT Password
-4. MQTT Topic
+1. MQTT Username
+1. MQTT Password
+1. MQTT Topic
 
-> #### Study Sensor
+#### Study Sensor
 
-> #### Server Cabinet Fan
+#### Server Cabinet Fan
 
 ### Kitchen  
 
