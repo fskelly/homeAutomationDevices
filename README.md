@@ -4,7 +4,7 @@
 
 ## Diagram
 
-![HAConnectivity](pictures\HACOnnectivity.drawio.svg)
+![HAConnectivity](pictures/HACOnnectivity.drawio.svg)
 
 **Why this repo?**  
 This is a collection of [ESPHome](https://ESPHome.io) configuration files, [Tasmota](https://tasmota.github.io/docs/) dmp files and code for my various ESP8266 devices that integrate with [Home Assistant](https://www.home-assistant.io/). I am using includes and packages pretty extensively in order to prevent duplication and allow for easy changing of common settings.
