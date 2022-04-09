@@ -1,6 +1,14 @@
 # Home Automation Devices  
 
+- [Devices](#devices)
+  - [ESPHome Devices](#esphome-devices)
+  - [Tasmota Devices](#tasmota-devices)
+  - [Off the Shelf Devices](#off-the-shelf-devices)
+  - [Power Monitoring](#power-monitoring)
+
 ## Overview  
+
+Just a simple repo about my home automation setup and devices. More a record of what I have been up.
 
 ## Hardware  
 
@@ -97,9 +105,7 @@ The file can be found [here](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
 1. Tapo P110
 1. Amazon Alexa
 
-Automation:
-
-
+Automations:
 
 ### Power Monitoring
 
