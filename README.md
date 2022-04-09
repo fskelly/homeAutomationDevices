@@ -2,6 +2,25 @@
 
 ## Overview  
 
+## Hardware  
+
+Intel NUC 5i5MYBE  
+
+## Case
+
+Akasa Newton S  
+
+Very happy with this case, what a difference, very nice. Very complete kit including new cables and numerous mounting options. A little expensive but well worth it.
+
+## Operating System
+
+Due to some issues with a BETA version - I have changed back to the stable build.
+
+Home Assistant OS 7.6
+Channel: **Stable**  
+Supervisor: **supervisor-2022.03.5**  
+Core: **core-2022.4.0**  
+
 ## Diagram
 
 ![HAConnectivity](pictures/HACOnnectivity.drawio.svg)
@@ -55,8 +74,38 @@ The file can be found [here](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
 
 #### Washing Machine SonOff POW
 
-## Off the Shelf Devices
+## Devices
 
-> ### [Basement Bathroom Sensor](./devices/basement_bathroom_sensor.yaml)
+### ESPHome Devices
 
-> This is a [WEMOS D1 Mini clone](https://www.amazon.com/gp/product/B076F52NQD/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) that is connected to a [motion sensor](https://www.amazon.com/gp/product/B07GJDJV63/ref=ppx_yo_dt_b_asin_title_o06_s01?ie=UTF8&psc=1), a [temperature/humidity/pressure sensor](https://www.amazon.com/gp/product/B07KYJNFMD/ref=ppx_yo_dt_b_asin_title_o06_s01?ie=UTF8&psc=1), and a [door sensor](https://www.amazon.com/gp/product/B07YBGZNNW/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1) and is used to control the lights, fan, and heater (heat lamps in the fan) in my basement bathroom.
+1. NeoPixel-Strip
+   1. Ip Address: 192.168.37.22
+   2. Identifier: test-neopixel-strip-1 Web Server
+   3. Use case: LEDs to let us know the status of our dishwasher, it is integrated dishwasher so we cannot see the front lights and we have often opened the dishwasher whilst it was still running.
+   4. File location: [here](/esphome/test-neopixel-strip-1.yaml)
+
+### Tasmota Devices
+
+1. Desk Extension
+   1. IP Address: 192.168.37.5
+   2. Identifier: Computer Desk Extension
+   3. Use case: Power saving and relay for computer desk extension / power strip
+   4. File location: [here](/tasmota/deskExtension/Config_tasmota_A28E3D_3645_10.1.0.dmp)
+
+### Off the Shelf Devices
+
+1. Tapo P110
+1. Amazon Alexa
+
+Automation:
+
+
+
+### Power Monitoring
+
+Currently using TAPO P110 and z-Wave Fibaro Plug
+
+Work Desk: around 300W per day  
+TV and Apple TV: around 200W per hour  
+Washing Machine:  
+Kettle: 2000w pull  
