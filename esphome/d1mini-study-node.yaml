@@ -1,0 +1,138 @@
+substitutions:
+  device_name: d1mini_lounge_sensor
+  io_username: !secret adafruit_io_username
+  io_key: !secret adafruit_io_key
+  update_interval: 30s
+
+esphome:
+  name: d1mini_study_sensor
+  platform: ESP8266
+  board: d1_mini
+
+# Wifi Config
+wifi:
+  networks:
+  - ssid: !secret wifi_ssid
+    password: !secret wifi_password
+    #hidden: true
+  fast_connect: true
+  # ...
+  ap:
+    ssid: "d1mini_study_sensor"
+    password: !secret wifi_password
+
+  # Optional manual IP
+  manual_ip:
+    static_ip: 192.168.37.15
+    gateway: 192.168.37.1
+    subnet: 255.255.255.128
+    dns1: 192.168.1.200
+    dns2: 8.8.8.8
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Example configuration entry
+web_server:
+  port: 80
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    pin: GPIO2
+    name: ${device_name}_motion
+    device_class: motion
+
+  - platform: status
+    name: ${device_name}_status
+    
+sensor:
+  - platform: wifi_signal
+    name: ${device_name} Sensor Wifi Signal
+    update_interval: ${update_interval}
+
+  - platform: uptime
+    name: ${device_name} Sensor Uptime
+    id: uptime_sensor
+    update_interval: ${update_interval}
+    on_raw_value:
+      then:
+        - text_sensor.template.publish:
+            id: uptime_human
+            state: !lambda |-
+              int seconds = round(id(uptime_sensor).raw_state);
+              int days = seconds / (24 * 3600);
+              seconds = seconds % (24 * 3600);
+              int hours = seconds / 3600;
+              seconds = seconds % 3600;
+              int minutes = seconds /  60;
+              seconds = seconds % 60;
+              return (
+                (days ? String(days) + "d " : "") +
+                (hours ? String(hours) + "h " : "") +
+                (minutes ? String(minutes) + "m " : "") +
+                (String(seconds) + "s")
+              ).c_str();
+    
+  - platform: bh1750
+    name: ${device_name}_illuminance
+    address: 0x23
+    update_interval: ${update_interval}
+    
+  - platform: bme280
+    temperature:
+      name: ${device_name}_temperature
+      oversampling: 16x
+    pressure:
+      name: ${device_name}_pressure
+    humidity:
+      name: ${device_name}_humidity
+    address: 0x76
+    update_interval: ${update_interval}
+
+switch:
+  - platform: restart
+    name: ${device_name}_restart
+
+# Text sensors with general information
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: ${device_name}_ip
+    ssid:
+      name: ${device_name}_ssid
+    bssid:
+      name: ${device_name}_bssid
+  - platform: version
+    name: ${device_name}_epshomeversion
+  - platform: template
+    name: ${device_name} Uptime Human Readable
+    id: uptime_human
+    icon: mdi:clock-start
+
+light:
+  - platform: neopixelbus
+    variant: ws2812
+    pin: GPIO0
+    num_leds: 1
+    type: grb
+    name: ${device_name}_led
+    
+## Use time
+time:
+  - platform: homeassistant
+    ## Set your timezone
+    timezone: Europe/Dublin
+  
+# Example configuration entry
+i2c:
+  sda: GPIO4
+  scl: GPIO5
+  scan: True
+
