@@ -87,7 +87,7 @@ The file can be found [here](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
 ### ESPHome Devices
 
 1. [test-neopixel-strip-1](/esphome/test-neopixel-strip-1/readme.md)
-1. [d1-mini-study-node](/esphome/d1-mini-study-node/readme.md)
+1. [d1mini-study-node](/esphome/d1mini-study-node/readme.md)
 
 ### Tasmota Devices
 
@@ -98,7 +98,7 @@ The file can be found [here](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
 1. Tapo P110
 1. Amazon Alexa
 
-Automations:
+Automations:s
 
 ### Power Monitoring
 
