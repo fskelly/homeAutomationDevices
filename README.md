@@ -86,11 +86,8 @@ The file can be found [here](/tasmota/lounge/Config_loungergbw_5090_9.1.0.dmp)
 
 ### ESPHome Devices
 
-1. NeoPixel-Strip
-   1. Ip Address: 192.168.37.22
-   2. Identifier: test-neopixel-strip-1 Web Server
-   3. Use case: LEDs to let us know the status of our dishwasher, it is integrated dishwasher so we cannot see the front lights and we have often opened the dishwasher whilst it was still running.
-   4. File location: [here](/esphome/test-neopixel-strip-1.yaml)
+1. [test-neopixel-strip-1](/esphome/test-neopixel-strip-1/readme.md)
+1. [d1-mini-study-node](/esphome/d1-mini-study-node/readme.md)
 
 ### Tasmota Devices
 
