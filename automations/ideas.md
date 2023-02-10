@@ -1,0 +1,1 @@
+[ ] Plug in car when excess energy is available - 1400W+ excess
